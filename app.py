@@ -1,6 +1,5 @@
 from logging import debug
 from flask import Flask, flash, render_template, request, jsonify
-from numpy.lib import index_tricks
 from apps.main_torch import transform_image
 
 app = Flask(__name__)
