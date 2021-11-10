@@ -1,0 +1,33 @@
+from logging import debug
+from flask import Flask, flash, render_template, request, jsonify
+from numpy.lib import index_tricks
+from apps.main_torch import transform_image
+
+app = Flask(__name__)
+
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.',1)[1].lower() in ALLOWED_EXTENSIONS
+
+@app.route('/')
+def hello_world():
+    return render_template('index.html')
+
+@app.route('/', methods=['POST'])
+def previsao():
+    if request.method == 'POST':
+        file = request.files.get('file')
+        if file is None or file.filename == '':
+            return jsonify({'error': 'no file'})
+        if not allowed_file(file.filename):
+            return jsonify({'error': 'format not supported'})
+        else:
+            img_bytes = file.read()
+            tensor = transform_image(img_bytes)
+            # return "Imagem transformada em tensor e pronto para a classificação: " + str(tensor)
+            prev =  str(tensor)
+            return render_template('index.html', previsao=prev)
+
+if __name__ == '__main__':
+    app.secret_key = 'ItIsASecret'
+    app.run( debug=True)

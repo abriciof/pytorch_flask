@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificação de Circuito</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1 style="text-align: center; justify-content: center; margin-top:50px;"> Classificação de Circuito Impresso </h1> <br><hr><br>
+            <form class="form-inline" style="text-align: center; justify-content: center;" action="/" method="post" enctype="multipart/form-data">
+                <div style="text-align: center;">
+                 <input type="file" name="file" class="form-control-file" ><br>
+                 <button type="submit" class="btn btn-primary">Verificar Classificação</button>
+                </div>
+              </form>
+          </div>
+      </div>
+      <br>
+      <hr>
+      <br>
+      {% if previsao %}
+        <div class="row">
+            <div class="col">
+                <p style="text-align: center; justify-content: center; " > {{previsao}}</p>
+            </div>
+        </div>
+      {% endif %}
+   
+  
+
+</body>
+</html>
