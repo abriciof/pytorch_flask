@@ -17,9 +17,11 @@ def previsao():
     if request.method == 'POST':
         file = request.files.get('file')
         if file is None or file.filename == '':
-            return jsonify({'error': 'no file'})
+            return render_template('index.html', previsao="Sem arquivo.")
+            # return jsonify({'error': 'no file'})
         if not allowed_file(file.filename):
-            return jsonify({'error': 'format not supported'})
+            # return jsonify({'error': 'format not supported'})
+            return render_template('index.html', previsao="Formato não suportado.")
         else:
             img_bytes = file.read()
             tensor = transform_image(img_bytes)
