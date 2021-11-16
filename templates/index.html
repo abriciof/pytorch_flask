@@ -5,16 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Classificação de Circuito</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    
 </head>
 <body>
     <div class="container">
         <div class="row">
-          <div class="col">
+          <div class="col" style="text-align: center; justify-content: center;" >
             <h1 style="text-align: center; justify-content: center; margin-top:50px;"> Classificação de Circuito Impresso </h1> <br><hr><br>
-            <form class="form-inline" style="text-align: center; justify-content: center;" action="/" method="post" enctype="multipart/form-data">
+            <!-- url_for('static', filename='img/avatar.png') -->
+            <img src="{{aaaa}}" id="avatar" alt="" style="margin-bottom: 20px; width: 20%;">
+            <form class="form-inline" style="text-align: center; justify-content: center;" action="/classificacao" method="post" enctype="multipart/form-data">
                 <div style="text-align: center;">
-                 <input type="file" name="file" class="form-control-file" ><br>
+                 <input type="file" name="file" class="form-control-file" id="upload" ><br>
+                 <input type="hidden"  name="invisivel" id="tipo" value="arroz">
                  <button type="submit" class="btn btn-primary">Verificar Classificação</button>
                 </div>
             </form>
@@ -32,7 +35,22 @@
         </div>
       {% endif %}
    
-  
+        <script>
+            document.addEventListener("DOMContentLoaded", function(){
+                document.querySelector("#upload").addEventListener("change", function(imagem){
+                    const arquivo = imagem.target.files.item(0);
+                    const endereco = new FileReader();
+                    endereco.onloadend = function(){
+                        document.querySelector("#avatar").setAttribute("src", endereco.result);
+                        document.querySelector("#tipo").setAttribute("value", endereco.result) 
+                    }
+                    endereco.readAsDataURL(arquivo);
+
+                    
+                });
+            });
+
+        </script>
 
 </body>
 </html>

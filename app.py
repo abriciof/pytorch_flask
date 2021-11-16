@@ -8,14 +8,17 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.',1)[1].lower() in ALLOWED_EXTENSIONS
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def hello_world():
-    return render_template('index.html')
+    src=""
+    return render_template('index.html', aaaa=src)
 
-@app.route('/', methods=['POST'])
+@app.route('/classificacao', methods=['POST'])
 def previsao():
     if request.method == 'POST':
         file = request.files.get('file')
+        src = request.form.get('invisivel')  
+        # print(src)
         if file is None or file.filename == '':
             return render_template('index.html', previsao="Sem arquivo.")
             # return jsonify({'error': 'no file'})
@@ -27,7 +30,7 @@ def previsao():
             tensor = transform_image(img_bytes)
             # return "Imagem transformada em tensor e pronto para a classificação: " + str(tensor)
             prev =  str(tensor)
-            return render_template('index.html', previsao=prev)
+            return render_template('index.html', previsao=prev, aaaa=src)
 
 if __name__ == '__main__':
     app.secret_key = 'ItIsASecret'
