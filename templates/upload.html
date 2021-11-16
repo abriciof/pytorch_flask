@@ -44,31 +44,25 @@
       <input type="file" name="file" id="file">
       <input type="hidden" name="invisivel" id="tipo" value="123">
       <button type="submit" class="btn">Enviar</button>
+
+      {% if previsao %}
+        <br><br>
+        <div class="row">
+            <div class="col" style="color: white; font-size: 1.3rem;">
+                <p style="text-align: center; justify-content: center; " > {{previsao}}</p>
+            </div>
+        </div>
+      {% endif %}
     </div>
     
   </form>
 
+    
+      
+ 
 
 </section>
 
-  <div class="resultado">
-    <div class="container">
-      {% if previsao %}
-      <div class="row">
-          <div class="col">
-              <p style="text-align: center; justify-content: center; " > {{previsao}}</p>
-          </div>
-      </div>
-      {% endif %}
-        
-    </div>
-  </div>
-
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src={{ url_for('static', filename='js/main.js') }} ></script>
-  <script src={{ url_for('static', filename='js/script.js') }} ></script>
 
   <script>
     document.addEventListener("DOMContentLoaded", function(){
@@ -91,6 +85,12 @@
     });
 
   </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src={{ url_for('static', filename='js/main.js') }} ></script>
+  <script src={{ url_for('static', filename='js/script.js') }} ></script>
+
+
 
   
 </body>
