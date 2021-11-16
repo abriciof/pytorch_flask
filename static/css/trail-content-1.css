@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+:root{
+  --color-blue:#6C5CE7;
+  --color-white: #fff;
+}
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  transition: all .2s linear;
+  text-decoration: none;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: .3px;
+  height: .3px;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 100;
+  background-image: linear-gradient( 45deg ,purple, var(--color-blue));
+  animation: colors 15s ease infinite;
+  background-size: 120% 120%;
+} 
+@keyframes colors{
+  0%{
+    background-position: 0% 50%;
+  }
+  100%{
+    background-position: 50% 50%;
+  }
+}
+
+
+.header .logo{
+  font-size: 1.35rem;
+  color: var(--color-white);
+}
+
+.header .logo i{
+  padding:0 .5rem;
+}
+
+.header .navbar ul{
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+
+}
+
+.header .navbar ul li{
+  margin: 0 1.5rem;
+}
+
+.header .navbar ul li a{
+  font-size: 1.35rem;
+  color: var(--color-white);
+}
+
+.header .navbar ul li a:hover{
+  color:#ccc;
+}

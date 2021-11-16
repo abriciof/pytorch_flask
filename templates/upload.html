@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href={{ url_for('static', filename='css/upload-file.css') }} >
+  <title>Neural Network</title>
+  <link rel="shortcut icon" href={{ url_for('static', filename='img/logo-aba-html.png') }}>
+</head>
+
+
+<body>
+
+<header class="header">
+
+<a href="/" class="logo"><i class="fab fa-neos"></i> Neural Network</a>
+
+<nav class="navbar">
+  <ul>
+    <li><a href="/">home</a></li>
+  </ul>
+</nav>
+
+
+</header>
+
+<section id="home" class="home">
+
+  <div class="fas fa-cog nut1"></div>
+  <div class="fas fa-cog nut2"></div>
+  <ul class="squares"></ul>
+
+  <form  class="drop-zone" action="/classificacao" method="post" enctype="multipart/form-data">
+    <div class="container">
+      <img src="{{aaaa}}" id="avatar" alt="" style=" width: 50%;">
+      <div class="icon" id="nn">
+        <i  class="fas fa-cloud-upload-alt" id="nuvem"></i>
+      </div>
+      <h3>Faça o upload da sua imagem</h3>
+      <label for="file">Escolher arquivo &#187</label>
+      <input type="file" name="file" id="file">
+      <input type="hidden" name="invisivel" id="tipo" value="123">
+      <button type="submit" class="btn">Enviar</button>
+    </div>
+    
+  </form>
+
+
+</section>
+
+  <div class="resultado">
+    <div class="container">
+      {% if previsao %}
+      <div class="row">
+          <div class="col">
+              <p style="text-align: center; justify-content: center; " > {{previsao}}</p>
+          </div>
+      </div>
+      {% endif %}
+        
+    </div>
+  </div>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src={{ url_for('static', filename='js/main.js') }} ></script>
+  <script src={{ url_for('static', filename='js/script.js') }} ></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      document.querySelector("#file").addEventListener("change", function(imagem){
+        const arquivo = imagem.target.files.item(0);
+        const endereco = new FileReader();
+        endereco.onloadend = function(){
+          document.querySelector("#avatar").setAttribute("src", endereco.result);
+          document.querySelector("#tipo").setAttribute("value", endereco.result);
+          document.querySelector("#nn").setAttribute("class", "");
+          document.querySelector("#nuvem").setAttribute("class", "fas");
+        }
+        endereco.readAsDataURL(arquivo);
+      });
+     
+      if(document.querySelector("#avatar").src == "{{aaaa}}"){
+        document.querySelector("#nuvem").setAttribute("class", "fas");
+        document.querySelector("#nn").setAttribute("class", "");
+      }
+    });
+
+  </script>
+
+  
+</body>
+</html>
