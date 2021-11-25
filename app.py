@@ -3,6 +3,7 @@ from flask import Flask, flash, render_template, request, jsonify
 from apps.main_torch import *
 from PIL import Image
 import numpy as np
+import io
 import cv2
 
 
