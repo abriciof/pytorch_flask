@@ -1,10 +1,15 @@
 from logging import debug
 from flask import Flask, flash, render_template, request, jsonify
-from apps.main_torch import transform_image
+from apps.main_torch import *
+from PIL import Image
+import numpy as np
+import cv2
+
+
 
 app = Flask(__name__)
 
-ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'jfif'}
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.',1)[1].lower() in ALLOWED_EXTENSIONS
 
@@ -35,7 +40,15 @@ def previsao():
             return render_template('upload.html', previsao="Formato não suportado.")
         else:
             img_bytes = file.read()
-            tensor = transform_image(img_bytes)
+            image = Image.open(io.BytesIO(img_bytes))
+            # buff = np.fromstring(img_bytes, np.uint8)
+            # buff = buff.reshape(1, -1)
+            # img = cv2.imdecode(buff, cv2.IMREAD_COLOR)
+            # img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+            
+            tensor = verifica_imagem(image)
+            # img = Image.open(src)
+            # plt.imshow(img)
             # return "Imagem transformada em tensor e pronto para a classificação: " + str(tensor)
             prev =  str(tensor)
             return render_template('upload.html', previsao=prev, aaaa=src)
