@@ -48,7 +48,7 @@ def previsao():
             # img = cv2.imdecode(buff, cv2.IMREAD_COLOR)
             # img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
             
-            tensor = verifica_imagem(image)
+            tensor = transform_image(image)
             # img = Image.open(src)
             # plt.imshow(img)
             # return "Imagem transformada em tensor e pronto para a classificação: " + str(tensor)
