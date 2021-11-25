@@ -4,7 +4,8 @@ from apps.main_torch import *
 from PIL import Image
 import numpy as np
 import io
-import cv2
+# import cv2
+# opencv-python==4.5.3.56
 
 
 
