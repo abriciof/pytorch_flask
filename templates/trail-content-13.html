@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href={{ url_for('static', filename='css/trail-content-5.css') }}>
+  <title>Neural Network</title>
+  <link rel="shortcut icon" href={{ url_for('static', filename='img/logo-aba-html.png') }}>
+  <link rel="stylesheet" href={{ url_for('static', filename='css/animations/load-animation.css') }}>
+</head>
+
+
+<body>
+
+  <div class="blue-background" id="top"></div>
+
+  <header class="header">
+
+    <a href="/" class="logo"><i class="fab fa-neos"></i> Neural Network</a>
+    
+    <nav class="navbar">
+      <ul>
+        <li><a href="/trilha">sumário</a></li>
+        <li><a href="/">home</a></li>
+      </ul>
+    </nav>
+   
+    
+  </header>
+
+  <section class="content">
+
+    <div class="controle">
+      <a href="/t12" class="back"><img src={{ url_for('static', filename='img/seta-back.svg') }} alt="icone da trilha" width="30px">Voltar</a>
+      <!-- <a href="/t14" class="next">Próximo<img src={{ url_for('static', filename='img/seta-next.svg') }} alt="icone da trilha" width="30px"></a> -->
+  </div>
+
+
+    <div class="texts" data-anime="up">
+     
+      <h1 data-anime="up">Aplicação do reconhecimento de imagem
+      </h1>
+      
+      <br>
+
+      <div class="legend">
+        <img src={{ url_for('static', filename='img/deep-learning.webp') }} alt="deep learning">
+        <p>
+          Deep learning.
+        </p>
+      </div>
+
+      <div class="explication">
+        <p>
+          Da esquerda para a direita na imagem acima, podemos observar:
+
+          <ul>
+            <li>
+              Input layer - A imagem de entrada real que é digitalizada.
+            </li>
+            <li>
+              O filtro que passa sobre a imagem de entrada é o retângulo da luz.
+            </li>
+            <li>
+              SI - Os mapas de ativação estão dispostos em uma pilha em cima um do outro, um para cada filtro utilizado.
+            </li>
+            <li>
+              O retângulo maior é 1 trecho para ser amostrado.
+            </li>
+            <li>
+              CI - Os mapas de ativação condensados ​​através de amostragem descendente.
+            </li>
+            <li>
+              S2 - Um novo grupo de mapas de ativação gerado passando os filtros sobre a pilha que é amostrada em primeiro lugar.
+            </li>
+            <li>
+              C2- A segunda amostra - que condensa o segundo grupo de mapas de ativação.
+            </li>
+            <li>
+              Uma camada totalmente conectada que designa saída com 1 rótulo por nó.
+            </li>
+          </ul>
+
+          <p>
+            Como uma CNN filtra as conexões por proximidade? O segredo está na adição de 2 novos tipos de camadas: camada de agrupamento e camadas convolucionais. Vamos explicar o processo, utilizando o exemplo de uma rede que é projetada para fazer apenas uma coisa, ou seja, para determinar se uma imagem contém um vovô ou não. O primeiro passo no processo é a camada de convolução que, por sua vez, tem várias etapas em si:
+          </p>
+  
+          <ul>
+            <li>
+              Em primeiro lugar, vamos dividir a imagem do vovô em uma série de quadros sobrepostos de 3x3 pixels.
+            </li>
+
+            <li>
+              Depois disso, vamos executar cada um desses quadros através de uma rede neural simples, de camada única, mantendo os pesos inalterados. Isso mudará a coleção de quadros em uma matriz. À medida que mantivemos cada uma das imagens pequenas (3x3 px neste caso), a rede neural necessária para processá-las permanece gerenciável e pequena.
+            </li>
+            <li>
+              Em seguida, os valores de saída serão tomados e dispostos em uma matriz que representa numericamente o conteúdo de cada área na fotografia, com os eixos que representam canais de cor, largura e altura. Então, para cada quadro, teríamos uma representação 3x3x3 px nesse caso. (Nós precisaríamos uma quarta dimensão para o tempo se estivéssemos falando sobre os vídeos do vovô).
+            </li>
+          </ul>
+                
+          <p>
+            O próximo passo é a camada de agrupamento. Isso utiliza essas matrizes de 3 ou 4 dimensões e aplica uma função de amostragem descendente juntamente com dimensões espaciais. O resultado é uma matriz agrupada que contém apenas as partes da imagem que são importantes descartando o restante, o que minimiza os cálculos que precisam ser feitos, evitando o problema de superposição.
+          
+            A matriz de amostragem descendente é utilizada como a entrada da rede neural completamente conectada.
+          
+            Uma vez que o tamanho da entrada foi reduzido drasticamente usando o agrupamento e convolução, agora devemos ter algo que uma rede normal será capaz de manipular ao mesmo tempo em que preserva as partes mais significativas de dados. A saída do passo final representará a confiança do sistema em termos da imagem de um vovô.
+            
+            Na vida real, o processo de funcionamento de uma CNN é complicado envolvendo numerosas camadas ocultas de agrupamento e convolução. Além disso, as CNN reais geralmente envolvem centenas ou milhares de rótulos, em vez de apenas um único rótulo.
+          </p>
+        </p>
+      </div>
+      <br>
+      <div class="bot">
+        <img src={{ url_for('static', filename='img/cerebro.png') }} alt="cerebro">
+        <p> Agora que você aprendeu um pouco sobre redes neural e como podemos aplicar ela na prática, veja como fazer a identificação de uma placa e os componentes que a compõem indo em <a href="/upload">suba sua imagem</a>. Continue seus estudos e aprenda mais sobre redes neurais artificiais!
+        </p>
+      </div>
+      <br>
+      
+      <div class="go-top">
+        <a href="#top"><img src={{ url_for('static', filename='img/up-arrow.svg') }} alt="icone da trilha" width="35px" id="up"></a>
+      </div>
+
+    </div>
+    
+  </section>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src={{ url_for('static', filename='js/load-animation.js') }}></script>
+
+</body>
+</html>

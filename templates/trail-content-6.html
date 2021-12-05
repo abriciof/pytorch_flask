@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href={{ url_for('static', filename='css/trail-content-1.css') }}>
+  <title>Neural Network</title>
+  <link rel="shortcut icon" href={{ url_for('static', filename='img/logo-aba-html.png') }}>
+  <link rel="stylesheet" href={{ url_for('static', filename='css/animations/load-animation.css') }}>
+</head>
+
+
+<body>
+
+  <div class="blue-background" id="top"></div>
+
+  <header class="header">
+
+    <a href="/" class="logo"><i class="fab fa-neos"></i> Neural Network</a>
+    
+    <nav class="navbar">
+      <ul>
+        <li><a href="/trilha">sumário</a></li>
+        <li><a href="/">home</a></li>
+      </ul>
+    </nav>
+   
+    
+  </header>
+
+  <section class="content">
+
+    <div class="controle">
+      <a href="/t5" class="back"><img src={{ url_for('static', filename='img/seta-back.svg') }} alt="icone da trilha" width="30px">Voltar</a>
+      <a href="/t7" class="next">Próximo<img src={{ url_for('static', filename='img/seta-next.svg') }} alt="icone da trilha" width="30px"></a>
+  </div>
+
+    <div class="texts" data-anime="up">
+     
+      <h1 data-anime="up">Modelo matemático de um neurônio</h1>
+      
+      <br>
+
+      <div class="explication">
+        <p>
+          O modelo proposto possui uma natureza binária. Tanto os sinais de entrada quanto a saída, são valores binários. McCulloch acreditava que o funcionamento do sistema nervoso central possuía um carater binário, ou seja, um neurônio infuencia ou não outro neurônio, mas posteriormente mostrou-se que não era dessa forma. O neurônio matemático é um modelo simplificado do neurônio biológico. Tais modelos inspirados a partir da análise da geração e propagação de impulsos elétricos pela membrana celular dos neurônios. 
+          <br>
+          O neurônio matemático recebe um ou mais sinais de entrada e devolve um único sinal de saída, que pode ser distribuído como sinal de saída da rede, ou como sinal de entrada para um ou vários outros neurônios da camada posterior (que formam a rede neural artificial). Os dendritos e axônios são representados matematicamente apenas pelas sinapses, e a intensidade da ligação é representada por uma grandeza denominada peso sináptico, simbolizada pela letra w. Quando as entradas, x são apresentadas ao neurônio, elas são multiplicadas pelos pesos sinápticos correspondentes, gerando as entradas ponderadas, ou seja, x1 que multiplica w1, etc… Isso descreve uma das bases matemáticas do funcionamento de uma rede neural artificial, a multiplicação de matrizes:
+        </p>
+     
+       </div>
+
+       <div class="legend">
+
+        <img src={{ url_for('static', filename='img/matriz.png') }} alt="Modelo de um neurônio biológico">
+
+        <p>
+          Multiplicação de matrizes entre sinais de entrada x e pesos sinápticos w (versão simplificada)     
+        </p>
+      </div>
+
+      <br>
+      
+      <div class="go-top">
+        <a href="#top"><img src={{ url_for('static', filename='img/up-arrow.svg') }} alt="icone da trilha" width="35px" id="up"></a>
+      </div>
+
+    </div>
+    
+  </section>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src={{ url_for('static', filename='js/load-animation.js') }}></script>
+
+</body>
+</html>

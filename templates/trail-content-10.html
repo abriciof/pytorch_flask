@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href={{ url_for('static', filename='css/trail-content-1.css') }}>
+  <title>Neural Network</title>
+  <link rel="shortcut icon" href={{ url_for('static', filename='img/logo-aba-html.png') }}>
+  <link rel="stylesheet" href={{ url_for('static', filename='css/animations/load-animation.css') }}>
+</head>
+
+
+<body>
+
+  <div class="blue-background" id="top"></div>
+
+  <header class="header">
+
+    <a href="/" class="logo"><i class="fab fa-neos"></i> Neural Network</a>
+    
+    <nav class="navbar">
+      <ul>
+        <li><a href="/trilha">sumário</a></li>
+        <li><a href="/">home</a></li>
+      </ul>
+    </nav>
+   
+    
+  </header>
+
+  <section class="content">
+
+    <div class="controle">
+      <a href="/t9" class="back"><img src={{ url_for('static', filename='img/seta-back.svg') }} alt="icone da trilha" width="30px">Voltar</a>
+      <a href="/t11" class="next">Próximo<img src={{ url_for('static', filename='img/seta-next.svg') }} alt="icone da trilha" width="30px"></a>
+  </div>
+
+
+    <div class="texts" data-anime="up">
+     
+      <h1 data-anime="up">Aplicação do reconhecimento de imagem
+      </h1>
+      
+      <br>
+
+      <div class="explication">
+        <p>
+          Podemos utilizar o reconhecimento de imagens para diversas finalidades, sendo a mais popular a organização de fotos pessoais. Quem não gostaria de gerenciar melhor uma enorme biblioteca de memórias fotográficas de acordo com temas visuais, de objetos particulares a paisagens amplas?
+
+        A experiência do usuário em aplicativos de organização de fotos está sendo fortalecida pelo reconhecimento de imagem. Além de fornecer um armazenamento de fotos, os aplicativos querem avançar, proporcionando às pessoas uma melhor experiência e melhores mecanismos de busca.
+
+        Isto pode ser atingido com a capacidade de organização de imagens de forma automatizada fornecidas pela aprendizagem por máquinas. A interface dos aplicativos de reconhecimento de imagem classifica as imagens com base em padrões identificados e os agrupa tematicamente.
+
+        Outras aplicações do reconhecimento de imagem incluem sites de fotografia e vídeo, marketing interativo, campanhas criativas, reconhecimento de rosto e imagem em redes sociais e classificação de imagem para sites com enormes bancos de dados visuais.
+        </p>
+      </div>
+     
+      <br>
+      
+      <div class="go-top">
+        <a href="#top"><img src={{ url_for('static', filename='img/up-arrow.svg') }} alt="icone da trilha" width="35px" id="up"></a>
+      </div>
+
+    </div>
+    
+  </section>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src={{ url_for('static', filename='js/load-animation.js') }}></script>
+
+</body>
+</html>

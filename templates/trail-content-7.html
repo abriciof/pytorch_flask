@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href={{ url_for('static', filename='css/trail-content-5.css') }}>
+  <title>Neural Network</title>
+  <link rel="shortcut icon" href={{ url_for('static', filename='img/logo-aba-html.png') }}>
+  <link rel="stylesheet" href={{ url_for('static', filename='css/animations/load-animation.css') }}>
+</head>
+
+
+<body>
+
+  <div class="blue-background" id="top"></div>
+
+  <header class="header">
+
+    <a href="/" class="logo"><i class="fab fa-neos"></i> Neural Network</a>
+    
+    <nav class="navbar">
+      <ul>
+        <li><a href="/trilha">sumário</a></li>
+        <li><a href="/">home</a></li>
+      </ul>
+    </nav>
+   
+    
+  </header>
+
+  <section class="content">
+
+    <div class="controle">
+      <a href="/t6" class="back"><img src={{ url_for('static', filename='img/seta-back.svg') }} alt="icone da trilha" width="30px">Voltar</a>
+      <a href="/t8" class="next">Próximo<img src={{ url_for('static', filename='img/seta-next.svg') }} alt="icone da trilha" width="30px"></a>
+  </div>
+
+    <div class="texts" data-anime="up">
+
+      <div class="bot">
+        <img src={{ url_for('static', filename='img/cerebro.png') }} alt="cerebro">
+        <p> O diagrama em blocos abaixo representa o modelo
+          matemático de um neurônio!
+        </p>
+      </div>
+     
+      <h1 data-anime="up">Modelo matemático de um neurônio</h1>
+      
+      <br>
+
+      <div class="explication">
+        <p>
+          
+        </p>
+        <ul>
+          <li>Sinais de entrada { X1, X2, …, Xn }: São os sinais de entrada normalmente normalizados para incrementar a eficiência computacional dos algoritmos de aprendizagem. São os dados que alimentam seu modelo preditivo</li>
+          <li>
+            Pesos sinápticos { W1, W2, …, Wn }: São os pesos das sinapses do k-ésimo
+            neurônio. São valores para ponderar os sinais de cada entrada da rede. Esses valores são aprendidos durante o treinamento.
+          </li>
+          <li>
+            Combinador linear { Σ }: Agrega todos os sinais de entrada que foram ponderados pelos respectivos pesos sinápticos a fim de produzir um potencial de ativação.
+          </li>
+          <li>
+            Bk é o bias do k-ésimo neurônio.
+          </li>
+          <li>
+            Potencial de ativação { 𝑢𝑘 }: é a combinação linear dos sinais de entrada ponderados por seus respectivos pesos. É o resultado obtido pela diferença do valor produzido entre o combinador linear e o limiar de ativação. Se o valor for positivo, ou seja, se u ≥ 0 então o neurônio produz um potencial excitatório; caso contrário, o potencial será inibitório.
+          </li>
+        </ul>
+        <div class="legend">
+
+          <img src={{ url_for('static', filename='img/somatorio.png') }} alt="Potencial de ativação">
+  
+          <p>
+            Potencial de ativação.       
+          </p>
+        </div>
+        <ul>
+          <li>
+            Função de ativação { 𝜑𝑘(∙) }: Seu objetivo é limitar a saída de um neurônio em um intervalo valores. É a função de ativação do k-ésimo neurônio.
+          </li>
+          <li>
+            Sinal de saída { 𝑦𝑘 }: É o valor final de saída podendo ser usado como entrada de outros neurônios que estão sequencialmente interligados. É a saída do k-ésimo neurônio.
+          </li>
+        </ul>
+
+      </div>
+      
+      <div class="explication">
+        <p>
+          Os modelos baseados em redes neurais artificiais são os que mais ganharam atenção nos últimos anos por conseguirem resolver problemas de IA nos quais se conseguia pouco avanço com outras técnicas. A partir da concepção do neurônio matemático, várias arquiteturas e modelos com diferentes combinações entre esses neurônios, e aplicando diferentes técnicas matemáticas e estatísticas, surgiram e propiciaram a criação de arquiteturas avançadas de Deep Learning como Redes Neurais Convolucionais, Redes Neurais Recorrentes, Auto Encoders, Generative Adversarial Networks, Memory Networks, entre outras.
+        </p>
+      </div>
+
+      <div class="bot">
+        <img src={{ url_for('static', filename='img/cerebro.png') }} alt="cerebro">
+        <p> Agora que você já aprendeu um pouco sobre redes neurais busque mais conhecimento, aprenda sobre perceptron e outros modelos. Adiante você aprenderá sobre as aplicações, continue aqui!
+        </p>
+      </div>
+
+      <br>
+      
+      <div class="go-top">
+        <a href="#top"><img src={{ url_for('static', filename='img/up-arrow.svg') }} alt="icone da trilha" width="35px" id="up"></a>
+      </div>
+
+    </div>
+    
+  </section>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src={{ url_for('static', filename='js/load-animation.js') }}></script>
+
+</body>
+</html>

@@ -108,6 +108,7 @@ div.blue-background {
   margin-top: 30px;
 } 
 
+
 .header .logo{
   font-size: 3.5rem;
   color: white;
@@ -121,6 +122,7 @@ div.blue-background {
   list-style-type: none;
   display: flex;
   align-items: center;
+
 }
 
 .header .navbar ul li{
@@ -148,26 +150,30 @@ section.content {
   box-shadow: 1px 1px 4px 1px rgb(155, 155, 155);
 } 
 
-
 section.content h1 {
   text-align: center;
   width: 100%;
   font-size: 3rem;
+  margin-top: 50px;
+
 }
 
-section.content h2 {
-  text-align: center;
-  width: 100%;
+section.content .texts .bot {
+  display: flex;
+  align-items: center;
+  background-color: rgb(198, 220, 248);
+  padding: 30px;
+  border-radius: 8px;
 }
 
-section.content .texts .explication ul {
-  margin-left: 35px;
-  font-size: 2.0rem;
-  line-height: 40px;
-  margin-bottom: 25px;
-  text-align: justify;
+section.content .texts .bot img {
+  width: 100px;
 }
 
+section.content .texts .bot p {
+  margin-left: 20px;
+  font-size: 1.8rem;
+}
 
 .content .texts .legend  {
   display: flex;
@@ -176,12 +182,20 @@ section.content .texts .explication ul {
   text-align: justify;
 }
 
-section.content .texts .legend a{
+section.content .texts .legend p{
   margin-top: 30px;
-  font-size: 15px;
+  font-size: 20px;
 }
 section.content .texts .legend img{
-  width: 400px;
+  width: 600px;
+}
+
+section.content .texts .explication ul {
+  margin-left: 35px;
+  font-size: 2.0rem;
+  line-height: 40px;
+  margin-bottom: 25px;
+  text-align: justify;
 }
 
 section.content p {
@@ -201,26 +215,25 @@ section.content p {
 }
 
 /* responsividade */
-@media (max-width: 660px){
-  html{
-    font-size: 50%;
-  }
-  .header .logo{
-    font-size: 2.4rem;
-  }
-  .header .navbar ul li a{
-    font-size: 1.9rem;
-  }
-  header .brand {
-    justify-content: center;
+
+@media(max-width:1024px){
+  section.content .texts .bot {
     flex-direction: column;
-    margin-top: 20px
   }
-  header .brand .title {
-    text-align: center;
-    margin: 20px 0 0 0;
+  section.content .texts .bot svg {
+      width: 100px;
   }
- }
+  section.content .texts .bot p {
+    margin-top: 10px;
+  }
+  section.content .texts .legend img{
+    width: 500px;
+  }
+  section.content .texts .legend p{
+    margin-top: 30px;
+    font-size: 15px;
+  }
+}
 
 @media (max-width: 1000px) {
   section.content {
@@ -228,17 +241,41 @@ section.content p {
   }
 }
 
-@media (max-width: 550px){
+@media (max-width: 768px) {
+  html {
+      font-size: 50%;
+  }
+  .header .logo{
+    font-size: 2.4rem;
+  }
+  .header .navbar ul li a{
+    font-size: 1.9rem;
+  }
   section.content .texts .legend img{
-    width: 300px;
+    width: 460px;
   }
 }
 
-@media (max-width: 450px) {
+@media(max-width:700px){
+  section.content .texts .legend img{
+    width: 400px;
+  }
+}
+
+@media(max-width:700px){
+  section.content .texts .legend img{
+    width: 320px;
+  }
+}
+
+@media (max-width: 475px) {
   .content .controle {
       flex-direction: column;
       margin-top: 15px;
       margin-bottom: 25px;
+  }
+  .content .controle .summary {
+      order: -1;
   }
   .content .controle a {
       justify-content: center;
@@ -248,6 +285,18 @@ section.content p {
   }
   .content .controle .next {
       margin: 10px 0 10px 0;
+  }
+  section.content .texts .bot {
+      flex-direction: column;
+  }
+  section.content .texts .bot svg {
+      width: 100px;
+  }
+  section.content .texts .bot p {
+      margin: 0;
+  }
+  section.content .texts .legend img{
+    width: 270px;
   }
   .content .go-top img {
       width: 30px;
@@ -267,7 +316,10 @@ section.content p {
 
 @media (max-width: 320px){
   section.content .texts .legend img{
-    width: 260px;
+    width: 230px;
+  }
+  section.content .texts .legend p{
+    margin-top: 30px;
+    font-size: 10px;
   }
 }
-

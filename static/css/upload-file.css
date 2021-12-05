@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
 
 :root{
-  --color-blue:#6C5CE7;
+  --color-blue:rgba(30, 30, 136, 0.918);
   --color-white: #fff;
 }
 
@@ -70,7 +70,7 @@ html::-webkit-scrollbar {
 .home{
   min-height: 100vh;
   width: 100vw;
-  background-image: linear-gradient(purple, var(--color-blue));
+  background-image: linear-gradient( 45deg,purple, var(--color-blue));
   display: flex;
   align-items: center;
   justify-content: center;

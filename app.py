@@ -55,6 +55,58 @@ def previsao():
             prev =  str(tensor)
             return render_template('upload.html', previsao=prev, aaaa=src)
 
+@app.route('/t1', methods=['GET'])
+def t1():
+    return render_template('trail-content-1.html')
+
+@app.route('/t2', methods=['GET'])
+def t2():
+    return render_template('trail-content-2.html')
+
+@app.route('/t3', methods=['GET'])
+def t3():
+    return render_template('trail-content-3.html')
+
+@app.route('/t4', methods=['GET'])
+def t4():
+    return render_template('trail-content-4.html')
+
+@app.route('/t5', methods=['GET'])
+def t5():
+    return render_template('trail-content-5.html')
+
+@app.route('/t6', methods=['GET'])
+def t6():
+    return render_template('trail-content-6.html')
+
+@app.route('/t7', methods=['GET'])
+def t7():
+    return render_template('trail-content-7.html')
+
+@app.route('/t8', methods=['GET'])
+def t8():
+    return render_template('trail-content-8.html')
+
+@app.route('/t9', methods=['GET'])
+def t9():
+    return render_template('trail-content-9.html')
+
+@app.route('/t10', methods=['GET'])
+def t10():
+    return render_template('trail-content-10.html')
+
+@app.route('/t11', methods=['GET'])
+def t11():
+    return render_template('trail-content-11.html')
+
+@app.route('/t12', methods=['GET'])
+def t12():
+    return render_template('trail-content-12.html')
+
+@app.route('/t13', methods=['GET'])
+def t13():
+    return render_template('trail-content-13.html')
+
 if __name__ == '__main__':
     app.secret_key = 'ItIsASecret'
     app.run( debug=True)

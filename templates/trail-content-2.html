@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href={{ url_for('static', filename='css/trail-content-1.css') }}>
+  <title>Neural Network</title>
+  <link rel="shortcut icon" href={{ url_for('static', filename='img/logo-aba-html.png') }}>
+  <link rel="stylesheet" href={{ url_for('static', filename='css/animations/load-animation.css') }}>
+</head>
+
+
+<body>
+
+  <div class="blue-background" id="top"></div>
+
+  <header class="header">
+
+    <a href="/" class="logo"><i class="fab fa-neos"></i> Neural Network</a>
+    
+    <nav class="navbar">
+      <ul>
+        <li><a href="/trilha">sumário</a></li>
+        <li><a href="/">home</a></li>
+      </ul>
+    </nav>
+   
+    
+  </header>
+
+  <section class="content">
+
+    <div class="controle">
+      <a href="/t1" class="back"><img src={{ url_for('static', filename='img/seta-back.svg') }} alt="icone da trilha" width="30px">Voltar</a>
+      <a href="/t3" class="next">Próximo<img src={{ url_for('static', filename='img/seta-next.svg') }} alt="icone da trilha" width="30px"></a>
+  </div>
+
+    <div class="texts" data-anime="up">
+
+      <h1 data-anime="up">O Neurônio Biológico</h1><br>
+
+      <div class="explication">
+        <p>
+          O neurônio é a unidade básica do cérebro humano, são as células responsáveis pela transmissão dos impulsos nervosos, pois nelas estão introduzidas propriedades de excitabilidade. O neurônio é constituído por 3 partes principais: 
+        </p>
+
+        <ul>
+          <li>
+            Corpo celular: é a região onde se situa a maioria das organelas dessa célula. Nessa região, a célula também pode receber impulsos nervosos provenientes de outra célula nervosa.
+          </li>
+
+          <li>
+            Dendritos: são extensões da célula através das quais ela recebe os impulsos nervosos advindos de outras células nervosas.
+          </li>
+          
+          <li>
+            Axônios: extensões da célula mais longas que os dendritos – geralmente são únicos – responsáveis pela transmissão dos impulsos nervosos para as demais células do organismo. Na extremidade em formato de cone próxima ao corpo celular, denominada cone de implementação, os sinais do axônio são gerados. Na outra extremidade do axônio, estão presentes várias ramificações, que transmitem os sinais para outras células, em uma região de junção denominada sinapse. A parte da ramificação presente na junção é denominada terminal sináptico.
+          </li>
+        </ul>
+      </div>
+
+      <div class="legend">
+
+        <img src={{ url_for('static', filename='img/neuronio-biologico.jpg') }} alt="neuronio-biologico">
+
+        <a href="https://www.deeplearningbook.com.br/o-neuronio-biologico-e-matematico/" target="_blank">FONTE: DEEP LEARNING BOOK</a>
+
+      </div>
+
+      <br>
+      
+      <div class="go-top">
+        <a href="#top"><img src={{ url_for('static', filename='img/up-arrow.svg') }} alt="icone da trilha" width="35px" id="up"></a>
+      </div>
+
+    </div>
+    
+  </section>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src={{ url_for('static', filename='js/load-animation.js') }}></script>
+
+</body>
+</html>

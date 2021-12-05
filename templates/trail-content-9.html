@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href={{ url_for('static', filename='css/trail-content-1.css') }}>
+  <title>Neural Network</title>
+  <link rel="shortcut icon" href={{ url_for('static', filename='img/logo-aba-html.png') }}>
+  <link rel="stylesheet" href={{ url_for('static', filename='css/animations/load-animation.css') }}>
+</head>
+
+
+<body>
+
+  <div class="blue-background" id="top"></div>
+
+  <header class="header">
+
+    <a href="/" class="logo"><i class="fab fa-neos"></i> Neural Network</a>
+    
+    <nav class="navbar">
+      <ul>
+        <li><a href="/trilha">sumário</a></li>
+        <li><a href="/">home</a></li>
+      </ul>
+    </nav>
+   
+    
+  </header>
+
+  <section class="content">
+
+    <div class="controle">
+      <a href="/t8" class="back"><img src={{ url_for('static', filename='img/seta-back.svg') }} alt="icone da trilha" width="30px">Voltar</a>
+      <a href="/t10" class="next">Próximo<img src={{ url_for('static', filename='img/seta-next.svg') }} alt="icone da trilha" width="30px"></a>
+  </div>
+
+    <div class="texts" data-anime="up">
+     
+      <h1 data-anime="up">Como as Redes Neurais Convolucionais realizam o reconhecimento de imagem</h1>
+      
+      <br>
+
+      <div class="explication">
+        <p>
+          No contexto da visão de máquina, o reconhecimento de imagem é a capacidade de um software identificar pessoas, lugares e objetos. Para reconhecer imagens, os computadores podem utilizar tecnologias de visão de máquina e softwares de inteligência artificial juntamente com uma câmera.
+          <br>
+          Embora seja muito fácil para o cérebro dos seres humanos e dos animais reconhecer objetos, os computadores têm certa dificuldade com a mesma tarefa. Quando olhamos para algo como uma árvore, um carro ou uma pessoa, geralmente não precisamos estudá-lo conscientemente antes de podermos dizer o que é. No entanto, para um computador, identificar qualquer coisa (seja um relógio, uma cadeira, seres humanos ou animais) representa um problema muito difícil e as apostas para encontrar uma solução para esse problema são muito altas.
+        </p>
+         
+      </div>
+      <div class="legend">
+
+        <img src={{ url_for('static', filename='img/classification-img.webp') }} alt="Classificação de Imagem">
+
+        <p>
+          Classificação de Imagem.       
+        </p>
+      </div>
+      <div class="explication">
+        <p>
+          O reconhecimento de imagens é um método de aprendizagem de máquina projetado para se assemelhar à maneira como o cérebro humano funciona. Com este método, os computadores ensinam a reconhecer os elementos visuais dentro de uma imagem. Ao confiar em bancos de dados grandes e observar padrões emergentes, os computadores podem analisar imagens e formular tags e categorias relevantes que fazem sentido.
+        </p>
+      </div>
+      <div class="legend">
+        <a href="https://www.infoq.com/br/articles/redes-neurais-convolucionais/">FONTE: INFOQ</a>
+      </div>
+      <br>
+      
+      <div class="go-top">
+        <a href="#top"><img src={{ url_for('static', filename='img/up-arrow.svg') }} alt="icone da trilha" width="35px" id="up"></a>
+      </div>
+
+    </div>
+    
+  </section>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src={{ url_for('static', filename='js/load-animation.js') }}></script>
+
+</body>
+</html>

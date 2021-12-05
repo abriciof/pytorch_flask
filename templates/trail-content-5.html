@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href={{ url_for('static', filename='css/trail-content-5.css') }}>
+  <title>Neural Network</title>
+  <link rel="shortcut icon" href={{ url_for('static', filename='img/logo-aba-html.png') }}>
+  <link rel="stylesheet" href={{ url_for('static', filename='css/animations/load-animation.css') }}>
+</head>
+
+
+<body>
+
+  <div class="blue-background" id="top"></div>
+
+  <header class="header">
+
+    <a href="/" class="logo"><i class="fab fa-neos"></i> Neural Network</a>
+    
+    <nav class="navbar">
+      <ul>
+        <li><a href="/trilha">sumário</a></li>
+        <li><a href="/">home</a></li>
+      </ul>
+    </nav>
+   
+    
+  </header>
+
+  <section class="content">
+
+    <div class="controle">
+      <a href="/t4" class="back"><img src={{ url_for('static', filename='img/seta-back.svg') }} alt="icone da trilha" width="30px">Voltar</a>
+      <a href="/t6" class="next">Próximo<img src={{ url_for('static', filename='img/seta-next.svg') }} alt="icone da trilha" width="30px"></a>
+  </div>
+
+    <div class="texts" data-anime="up">
+
+      <div class="bot">
+        <img src={{ url_for('static', filename='img/cerebro.png') }} alt="cerebro">
+        <p> Compreendendo e se inspirando no neurônio biológico, os pesquisadores desenvolveram um modelo de neurônio matemático que se tornou a base da Inteligência Artificial. A ideia era simples: “Se redes neurais formam a inteligência humana, vamos reproduzir isso e criar Inteligência Artificial”. E assim surgiu o modelo de neurônio matemático.
+        </p>
+      </div>
+      
+      <h1 data-anime="up">Modelo matemático de um neurônio</h1><br>
+
+
+      <div class="explication">
+       <p>
+        Um neurônio é uma unidade de processamento de
+        informação essencial em uma rede neural biológica.
+       </p>
+    
+      </div>
+
+      <div class="legend">
+
+        <img src={{ url_for('static', filename='img/modelo-neuronio.png') }} alt="Modelo de um neurônio biológico">
+
+        <p>
+          Modelagem de um neurônio biológico.
+        </p>
+      </div>
+      
+      <div class="explication">
+        <p>
+          Uma rede neural artificial é composta por várias unidades de processamento, cujo funcionamento é bastante simples. Essas unidades, geralmente são conectadas por canais de comunicação que estão associados a determinado peso. As unidades fazem operações apenas sobre seus dados locais, que são entradas recebidas pelas suas conexões. O comportamento inteligente de uma Rede Neural Artificial vem das interações entre as unidades de processamento da rede.
+          <br>
+          A operação de uma unidade de processamento, proposta por McCullock e Pitts em 1943, pode ser resumida da seguinte maneira:
+        </p>
+
+        <ul>
+            <li>Sinais são apresentados à entrada;</li>
+            <li>
+            Cada sinal é multiplicado por um número, ou peso, que indica a sua influência na saída da unidade;
+            </li>
+            <li>É feita a soma ponderada dos sinais que produz um nível de atividade;</li>
+            <li> Se este nível de atividade exceder um certo limite (threshold) a unidade produz uma determinada resposta de saída.</li>
+        </ul>
+       </div>
+       
+      <br>
+      <div class="go-top">
+        <a href="#top"><img src={{ url_for('static', filename='img/up-arrow.svg') }} alt="icone da trilha" width="35px" id="up"></a>
+      </div>
+
+    </div>
+    
+  </section>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src={{ url_for('static', filename='js/load-animation.js') }}></script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href={{ url_for('static', filename='css/trail-content-1.css') }}>
+  <title>Neural Network</title>
+  <link rel="shortcut icon" href={{ url_for('static', filename='img/logo-aba-html.png') }}>
+  <link rel="stylesheet" href={{ url_for('static', filename='css/animations/load-animation.css') }}>
+</head>
+
+
+<body>
+
+  <div class="blue-background" id="top"></div>
+
+  <header class="header">
+
+    <a href="/" class="logo"><i class="fab fa-neos"></i> Neural Network</a>
+    
+    <nav class="navbar">
+      <ul>
+        <li><a href="/trilha">sumário</a></li>
+        <li><a href="/">home</a></li>
+      </ul>
+    </nav>
+   
+    
+  </header>
+
+  <section class="content">
+
+    <div class="controle">
+      <a href="/t7" class="back"><img src={{ url_for('static', filename='img/seta-back.svg') }} alt="icone da trilha" width="30px">Voltar</a>
+      <a href="/t9" class="next">Próximo<img src={{ url_for('static', filename='img/seta-next.svg') }} alt="icone da trilha" width="30px"></a>
+  </div>
+
+    <div class="texts" data-anime="up">
+     
+      <h1 data-anime="up">Como as redes neurais podem ser úteis?</h1>
+      
+      <br>
+
+      <div class="explication">
+        <P>
+          A grande vantagem das redes neurais é que sua arquitetura principal é sempre a mesma, mudando apenas a quantidade de neurônios que usamos devido à quantidade de informação que temos e da interpretação que esperamos.
+          <br>
+          Ainda mais, as redes neurais não exigem manutenção manual, seu processo de aprimoramento depende única e exclusivamente do conjunto de treinamento. Ou seja, quanto maior o conjunto de treinamento, mais o sistema aprende. Da mesma forma que alunos compreendem melhor uma matéria à medida que o professor apresenta mais exemplos.
+          <br>
+          Desse modo, programação via redes neurais é comumente utilizada em problemas que exigem análises de grandes quantidades de dados que possuem uma interpretação específica. Podemos citar o caso das previsões meteorológicas. Na qual, analisando informações como umidade, pressão, temperatura e velocidade do vento é possível determinar as características do clima para determinado período.
+          <br>
+          Além disso, em outra situação, as redes neurais podem ser destinadas ao mercado imobiliário. Nesse sentido, é possível estipular qual seria o preço de um imóvel através de uma análise do tamanho da casa, número de cômodos, banheiros e entre outros fatores.
+        </P>
+      </div>
+
+      <div class="legend">
+        <a href="https://www.quanta.org.br/blog/redes-neurais-aplicacoes/?gclid=Cj0KCQiA-eeMBhCpARIsAAZfxZD-7dpV-ARl2SRmY3ZatAy42ivtZlIl7VHJyX49YsDnY1F7Uzam4qMaAjNGEALw_wcB" target="_blank"> FONTE - REDES NEURAIS: O QUE SÃO E SUAS APLICAÇÕES
+        </a>
+      </div>
+      <br>
+      
+      <div class="go-top">
+        <a href="#top"><img src={{ url_for('static', filename='img/up-arrow.svg') }} alt="icone da trilha" width="35px" id="up"></a>
+      </div>
+
+    </div>
+    
+  </section>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src={{ url_for('static', filename='js/load-animation.js') }}></script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href={{ url_for('static', filename='css/trail-content-1.css') }}>
+  <title>Neural Network</title>
+  <link rel="shortcut icon" href={{ url_for('static', filename='img/logo-aba-html.png') }}>
+  <link rel="stylesheet" href={{ url_for('static', filename='css/animations/load-animation.css') }}>
+</head>
+
+
+<body>
+
+  <div class="blue-background" id="top"></div>
+
+  <header class="header">
+
+    <a href="/" class="logo"><i class="fab fa-neos"></i> Neural Network</a>
+    
+    <nav class="navbar">
+      <ul>
+        <li><a href="/trilha">sumário</a></li>
+        <li><a href="/">home</a></li>
+      </ul>
+    </nav>
+   
+    
+  </header>
+
+  <section class="content">
+
+    <div class="controle">
+      <a href="/t10" class="back"><img src={{ url_for('static', filename='img/seta-back.svg') }} alt="icone da trilha" width="30px">Voltar</a>
+      <a href="/t12" class="next">Próximo<img src={{ url_for('static', filename='img/seta-next.svg') }} alt="icone da trilha" width="30px"></a>
+  </div>
+
+
+    <div class="texts" data-anime="up">
+     
+      <h1 data-anime="up">A complexa tarefa de implementação do reconhecimento de imagem
+      </h1>
+      
+      <br>
+
+      <div class="explication">
+        <p>
+          O reconhecimento de imagens não é uma tarefa fácil. Uma boa maneira de realizá-lo para dados não estruturados é através da utilização de metadados. A contratação de especialistas para categorização manual de bibliotecas de músicas e filmes seria uma tarefa complicada, e torna-se altamente inviável quando se trata de um cenário com milhões de fotos e vídeos adicionados pelos usuários diariamente nas mídias sociais ou em atividades como o ensino do sistema de navegação de um carro sem motorista que precisa diferenciar os pedestres que atravessam a estrada de vários outros veículos .
+
+          Uma maneira de resolver esse problema seria através da utilização de Redes Neurais Artificiais (ANN). Em teoria, podemos fazer uso de Redes Neurais convencionais para analisar imagens, mas na prática, analisando através da perspectiva computacional é altamente dispendioso. Por exemplo, uma rede neural convencional tentando processar uma imagem pequena (30x30 pixels) ainda precisaria de 0,5 milhões de parâmetros e 900 entradas. Uma máquina razoavelmente poderosa pode lidar com isso, mas uma vez que as imagens se tornam muito maiores (por exemplo, 500x500 pixels), o número de parâmetros e entradas aumentaria para níveis muito altos.
+
+          Existe outro problema associado à aplicação de redes neurais ao reconhecimento de imagens: sobreposição. Em termos simples, a superposição ocorre quando um modelo se adapta muito bem aos dados em que foi treinado. Geralmente, isso é conseguido a partir da adição de parâmetros (aumentando ainda mais os custos computacionais), sendo que a exposição do modelo a novos dados resulta em uma perda no desempenho geral.
+        </p>
+      </div>
+     
+      <br>
+      
+      <div class="go-top">
+        <a href="#top"><img src={{ url_for('static', filename='img/up-arrow.svg') }} alt="icone da trilha" width="35px" id="up"></a>
+      </div>
+
+    </div>
+    
+  </section>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src={{ url_for('static', filename='js/load-animation.js') }}></script>
+
+</body>
+</html>

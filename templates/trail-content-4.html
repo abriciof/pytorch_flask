@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href={{ url_for('static', filename='css/trail-content-1.css') }}>
+  <title>Neural Network</title>
+  <link rel="shortcut icon" href={{ url_for('static', filename='img/logo-aba-html.png') }}>
+  <link rel="stylesheet" href={{ url_for('static', filename='css/animations/load-animation.css') }}>
+</head>
+
+
+<body>
+
+  <div class="blue-background" id="top"></div>
+
+  <header class="header">
+
+    <a href="/" class="logo"><i class="fab fa-neos"></i> Neural Network</a>
+    
+    <nav class="navbar">
+      <ul>
+        <li><a href="/trilha">sumário</a></li>
+        <li><a href="/">home</a></li>
+      </ul>
+    </nav>
+   
+    
+  </header>
+
+  <section class="content">
+
+    <div class="controle">
+      <a href="/t3" class="back"><img src={{ url_for('static', filename='img/seta-back.svg') }} alt="icone da trilha" width="30px">Voltar</a>
+      <a href="/t5" class="next">Próximo<img src={{ url_for('static', filename='img/seta-next.svg') }} alt="icone da trilha" width="30px"></a>
+  </div>
+
+    <div class="texts" data-anime="up">
+
+      <h1 data-anime="up">O que é uma sinapse</h1><br>
+
+      <div class="explication">
+        <p>
+          Sinapse é uma junção especializada entre o neurônio e sua célula-alvo. É nessa região que os impulsos nervosos são transmitidos de uma célula para outra. A região da ramificação presente nessa junção é chamada de terminal sináptico. Durante a sinapse, o neurônio que transmite o impulso nervoso é denominado célula pré-sináptica, e a célula que recebe o impulso, que pode ser outro neurônio, uma glândula ou célula muscular, é denominada célula pós-sináptica.
+        </p>
+      </div>
+
+      <div class="legend">
+
+        <img src={{ url_for('static', filename='img/sinapse.jpg') }} alt="sinapse">
+
+        <p>
+          Sinapse é uma junção especializada onde ocorre a transmissão do impulso nervoso do neurônio para a célula-alvo.        </p>
+
+      </div>
+
+      <div class="explication">
+        <p>
+          As sinapses podem ocorrer de duas formas:
+        </p>
+
+        <ul>
+          <li>
+            Sinapses elétricas: a corrente elétrica flui de um neurônio para outro por meio de junções gap (junções que formam canais citoplasmáticos, permitindo a comunicação entre células). Esse tipo de sinapse é comum em invertebrados.
+          </li>
+          <li>
+            Sinapses químicas: a informação é transmitida de um neurônio para outro por meio de mensageiros químicos denominados neurotransmissores. O neurônio pré-sináptico sintetiza e empacota os neurotransmissores nas chamadas vesículas sinápticas. Com a chegada do impulso elétrico e a despolarização da membrana pré-sináptica, esses neurotransmissores são liberados. O neurotransmissor liberado estimula a membrana pós-sináptica do neurônio receptor, alterando sua permeabilidade e originando um novo impulso nervoso.
+          </li>
+        </ul>
+      </div>
+      
+      <div class="go-top">
+        <a href="#top"><img src={{ url_for('static', filename='img/up-arrow.svg') }} alt="icone da trilha" width="35px" id="up"></a>
+      </div>
+
+    </div>
+    
+  </section>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src={{ url_for('static', filename='js/load-animation.js') }}></script>
+
+</body>
+</html>

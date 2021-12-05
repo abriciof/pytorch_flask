@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href={{ url_for('static', filename='css/trail-content-1.css') }}>
+  <title>Neural Network</title>
+  <link rel="shortcut icon" href={{ url_for('static', filename='img/logo-aba-html.png') }}>
+  <link rel="stylesheet" href={{ url_for('static', filename='css/animations/load-animation.css') }}>
+</head>
+
+
+<body>
+
+  <div class="blue-background" id="top"></div>
+
+  <header class="header">
+
+    <a href="/" class="logo"><i class="fab fa-neos"></i> Neural Network</a>
+    
+    <nav class="navbar">
+      <ul>
+        <li><a href="/trilha">sumário</a></li>
+        <li><a href="/">home</a></li>
+      </ul>
+    </nav>
+   
+    
+  </header>
+
+  <section class="content">
+
+    <div class="controle">
+      <a href="/t11" class="back"><img src={{ url_for('static', filename='img/seta-back.svg') }} alt="icone da trilha" width="30px">Voltar</a>
+      <a href="/t13" class="next">Próximo<img src={{ url_for('static', filename='img/seta-next.svg') }} alt="icone da trilha" width="30px"></a>
+  </div>
+
+
+    <div class="texts" data-anime="up">
+     
+      <h1 data-anime="up">Aplicação do reconhecimento de imagem
+      </h1>
+      
+      <br>
+
+      <div class="legend">
+        <img src={{ url_for('static', filename='img/rede-neural-convulocional.webp') }} alt="Modelo arquitetural de uma rede neural convolucional">
+        <p>
+          Modelo arquitetural de uma rede neural convolucional.
+        </p>
+      </div>
+
+      <div class="explication">
+        <p>
+          Dependendo da forma de como uma rede neural é estruturada, uma mudança relativamente direta pode tornar mesmo as imagens gigantes mais gerenciáveis. O resultado é o que chamamos de Redes Neurais Convolucionais conhecidas também como CNN ou ConvNet.
+          <br>
+          A aplicabilidade geral das Redes Neurais é uma das vantagens, mas essa vantagem se transforma em responsabilidade quando se trata de imagens. As Redes Neurais Convolucionais fazem uma compensação consciente: se uma rede foi projetada para manipular especificamente as imagens, alguma generalização deve ser sacrificada para uma solução muito mais viável.
+          <br>
+          Se você considerar uma imagem, a proximidade dos pixels tem uma forte relação com a semelhança e as Redes Neurais Convolucionais usam especificamente esse fato. Isso implica que, em uma determinada imagem, dois pixels que estão mais próximos uns dos outros são mais propensos a estar relacionados do que os dois pixels que estão separados um do outro. No entanto, em uma rede neural usual, cada pixel está ligado a cada neurônio. Neste caso, a carga computacional adicionada torna a rede menos precisa.
+          <br>
+          Ao matar muitas dessas conexões que são menos significativas, a convolução resolve esse problema. Em termos técnicos, as Redes Neurais Convolucionais tornam o processamento de imagens computacionalmente gerenciável através da filtragem das conexões por proximidade. Em uma determinada camada, em vez de ligar cada entrada a cada neurônio, as Redes Neurais Convolucionais restringem as conexões intencionalmente para que qualquer neurônio aceite as entradas apenas a partir de uma pequena subseção da camada anterior (como por exemplo 5x5 px ou 3x3 px ). Portanto, cada neurônio é responsável por processar apenas uma certa porção de uma imagem. (Aliás, isso é quase como os neurônios corticais individuais funcionam em seu cérebro. Cada neurônio responde apenas a uma pequena porção do seu campo visual completo).
+
+
+        </p>
+      </div>
+     
+      <br>
+      
+      <div class="go-top">
+        <a href="#top"><img src={{ url_for('static', filename='img/up-arrow.svg') }} alt="icone da trilha" width="35px" id="up"></a>
+      </div>
+
+    </div>
+    
+  </section>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src={{ url_for('static', filename='js/load-animation.js') }}></script>
+
+</body>
+</html>

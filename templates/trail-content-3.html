@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href={{ url_for('static', filename='css/trail-content-1.css') }}>
+  <title>Neural Network</title>
+  <link rel="shortcut icon" href={{ url_for('static', filename='img/logo-aba-html.png') }}>
+  <link rel="stylesheet" href={{ url_for('static', filename='css/animations/load-animation.css') }}>
+</head>
+
+
+<body>
+
+  <div class="blue-background" id="top"></div>
+
+  <header class="header">
+
+    <a href="/" class="logo"><i class="fab fa-neos"></i> Neural Network</a>
+    
+    <nav class="navbar">
+      <ul>
+        <li><a href="/trilha">sumário</a></li>
+        <li><a href="/">home</a></li>
+      </ul>
+    </nav>
+   
+    
+  </header>
+
+  <section class="content">
+
+    <div class="controle">
+      <a href="/t2" class="back"><img src={{ url_for('static', filename='img/seta-back.svg') }} alt="icone da trilha" width="30px">Voltar</a>
+      <a href="/t4" class="next">Próximo<img src={{ url_for('static', filename='img/seta-next.svg') }} alt="icone da trilha" width="30px"></a>
+  </div>
+
+    <div class="texts" data-anime="up">
+
+      <h1 data-anime="up">O que é um impulso nervoso ?</h1><br>
+
+      <div class="explication">
+        <p>
+          Impulso nervoso é uma corrente elétrica que percorre o axônio (parte do neurônio responsável pela transmissão do impulso nervoso) com o objetivo de transmitir uma informação. Esse processo ocorre em consequência da despolarização que ocorre ao longo da membrana do neurônio.
+        </p>
+        <p>
+          Em virtude da manutenção de uma grande concentração de íons sódio fora dos neurônios por meio de um processo de transporte ativo (bombas de sódio e potássio), a face externa da membrana apresenta uma carga elétrica positiva, e a interna, uma carga elétrica negativa, quando o axônio do neurônio encontra-se em repouso.
+        </p>
+        <p>
+          Quando esse axônio é estimulado em qualquer ponto, ocorre uma mudança na permeabilidade da membrana, alterando, assim, sua polaridade. Essa mudança afeta também a região vizinha, assim, o impulso nervoso percorre a membrana como uma onda de mudança de polaridade.
+        </p>
+      </div>
+
+      <div class="legend">
+
+        <img src={{ url_for('static', filename='img/impulso-nervoso.jpg') }} alt="Impulso nervoso">
+
+        <p>
+          Sentido do impulso nervoso
+        </p>
+
+      </div>
+
+      <div class="explciation">
+        <p>
+          O impulso nervoso é uma corrente elétrica que percorre o axônio por efeito do processo de despolarização da membrana.
+        </p>
+      </div>
+      <br>
+      
+      <div class="go-top">
+        <a href="#top"><img src={{ url_for('static', filename='img/up-arrow.svg') }} alt="icone da trilha" width="35px" id="up"></a>
+      </div>
+
+    </div>
+    
+  </section>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src={{ url_for('static', filename='js/load-animation.js') }}></script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href={{ url_for('static', filename='css/trail-content-1.css') }}>
+  <title>Neural Network</title>
+  <link rel="shortcut icon" href={{ url_for('static', filename='img/logo-aba-html.png') }}>
+  <link rel="stylesheet" href={{ url_for('static', filename='css/animations/load-animation.css') }}>
+</head>
+
+
+<body>
+
+  <div class="blue-background" id="top"></div>
+
+  <header class="header">
+
+    <a href="/" class="logo"><i class="fab fa-neos"></i> Neural Network</a>
+    
+    <nav class="navbar">
+      <ul>
+        <li><a href="/trilha">sumário</a></li>
+        <li><a href="/">home</a></li>
+      </ul>
+    </nav>
+   
+    
+  </header>
+
+  <section class="content">
+
+    <div class="controle">
+      <a href="/trilha" class="back"><img src={{ url_for('static', filename='img/seta-back.svg') }} alt="icone da trilha" width="30px">Voltar</a>
+      <a href="/t2" class="next">Próximo<img src={{ url_for('static', filename='img/seta-next.svg') }} alt="icone da trilha" width="30px"></a>
+  </div>
+
+    <div class="texts" data-anime="up">
+
+      <h1 data-anime="up">Um breve histórico</h1><br>
+
+      <div class="explication">
+        <p>
+          Um histórico resumido sobre Redes Neurais Artificiais deve começar por três das mais importantes publicações iniciais, desenvolvidas por: McCulloch e Pitts (1943), Hebb (1949), e Rosemblatt (1958). Estas publicações introduziram o primeiro modelo de redes neurais simulando “máquinas”, o modelo básico de rede de auto-organização, e o modelo Perceptron de aprendizado supervisionado, respectivamente.
+
+          Alguns históricos sobre a área costumam “pular” os anos 60 e 70 e apontar um reínicio da área com a publicação dos trabalhos de Hopfield (1982) relatando a utilização de redes simétricas para otimização e de Rumelhart, Hinton e Williams que introduziram o poderoso método Backpropagation.
+
+          Entretanto, para se ter um histórico completo, devem ser citados alguns pesquisadores que realizaram, nos anos 60 e 70, importantes trabalhos sobre modelos de redes neurais em visão, memória, controle e auto-organização como: Amari, Anderson, Cooper, Cowan, Fukushima, Grossberg, Kohonen, von der Malsburg, Werbos e Widrow.
+        </p>
+      </div>
+
+      <h2 data-anime="up">O que é uma Rede Neural Artificial?</h2>
+      
+      <br>  
+
+      <div class="explication">
+        <p>
+          Redes neurais artificiais é um método para solução de problemas através da simulação do cérebro humano, inclusive em seu comportamento, ou seja, aprendendo, errando e fazendo descobertas. São técnicas computacionais que apresentam um modelo inspirado na estrutura neural de organismos inteligentes e que adquirem conhecimento através da experiência.
+
+          As técnicas de redes neurais têm sido cada vez mais aplicadas em problemas de difícil modelagem computacional ou em áreas em que um modelo matemático seria complexo demais para ser útil. Áreas como reconhecimento de imagens (câmeras fotográficas, placas de veículos, diagnóstico de doenças por imagem, etc.), processamento de áudio (reconhecimento de voz, interlocutores, filtragem seletiva), previsão de vazão de chuvas e carga elétrica, previsão de índices de bolsas de valores, data mining, jogos com agentes inteligentes, e-mail anti-spam, detecção de intrusão em redes de computadores, entre muitas outras.
+        </p>
+      </div>
+
+      <div class="legend">
+
+        <img src={{ url_for('static', filename='img/neuronio.gif') }} alt="Imagem da representação de um neurônio">
+
+        <a href="https://sites.icmc.usp.br/andre/research/neural/#hist" target="_blank">FONTE: REDES NEURAIS ARTIFICIAIS - USP
+        </a>
+
+      </div>
+
+      <br>
+      
+      <div class="go-top">
+        <a href="#top"><img src={{ url_for('static', filename='img/up-arrow.svg') }} alt="icone da trilha" width="35px" id="up"></a>
+      </div>
+
+    </div>
+    
+  </section>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src={{ url_for('static', filename='js/load-animation.js') }}></script>
+
+</body>
+</html>
