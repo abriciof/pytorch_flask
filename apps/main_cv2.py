@@ -4,7 +4,8 @@ import cv2
 
 # Transformando qualquer imagem em um quadrado com preenchimento preto
 def get_square(image,square_size):
-    height,width=image.shape
+    height = image.shape[0]
+    width = image.shape[1]
     if(height>width):
       differ=height
     else:
