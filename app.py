@@ -6,7 +6,7 @@ from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
 import io
-import cv2
+#import cv2
 # opencv-python==4.5.3.56
 
 
@@ -45,13 +45,13 @@ def previsao():
         else:
             img_bytes = file.read()
             # print(type(img_bytes))
-            image = Image.open(io.BytesIO(img_bytes)) #imagem PIL
-            # print(type(image))
-            buff = np.fromstring(img_bytes, np.uint8)
-            # print(type(buff))
-            buff = buff.reshape(1, -1)
-            # print(type(buff))
-            img = cv2.imdecode(buff,  cv2.IMREAD_GRAYSCALE )
+#             image = Image.open(io.BytesIO(img_bytes)) #imagem PIL
+#             # print(type(image))
+#             buff = np.fromstring(img_bytes, np.uint8)
+#             # print(type(buff))
+#             buff = buff.reshape(1, -1)
+#             # print(type(buff))
+#             img = cv2.imdecode(buff,  cv2.IMREAD_GRAYSCALE )
             # print(type(img))
             # img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB) #imagem cv2 pronta para ser trabalhada
             # print(type(img))
@@ -65,43 +65,43 @@ def previsao():
             # img = cv2.imdecode(buff, cv2.IMREAD_COLOR)
             # img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB) #imagem cv2 pronta para ser trabalhada
 
-            lista_blocos = corta3x3(img)
-            lista_blocos_PIL = cv2_to_PIL(lista_blocos)
-            resultado = quantos_verificou(lista_blocos_PIL)
+#             lista_blocos = corta3x3(img)
+#             lista_blocos_PIL = cv2_to_PIL(lista_blocos)
+#             resultado = quantos_verificou(lista_blocos_PIL)
 
-            if resultado[0]>0:
-                fusivel = f'Quantidade de Fusível: {resultado[0]}'
-            else:
-                fusivel = 0
+#             if resultado[0]>0:
+#                 fusivel = f'Quantidade de Fusível: {resultado[0]}'
+#             else:
+#                 fusivel = 0
 
-            if resultado[1]>0:
-                rele = f'Quantidade de Relé: {resultado[1]}'
-            else:
-                rele = 0
+#             if resultado[1]>0:
+#                 rele = f'Quantidade de Relé: {resultado[1]}'
+#             else:
+#                 rele = 0
 
-            if resultado[2]>0:
-                capacitor = f'Quantidade de Capacitor Eletrolítico: {resultado[2]}'
-            else:
-                capacitor = 0
+#             if resultado[2]>0:
+#                 capacitor = f'Quantidade de Capacitor Eletrolítico: {resultado[2]}'
+#             else:
+#                 capacitor = 0
 
-            if resultado[3]>0:
-                led = f'Quantidade de LED: {resultado[3]}'
-            else:
-                led = 0
+#             if resultado[3]>0:
+#                 led = f'Quantidade de LED: {resultado[3]}'
+#             else:
+#                 led = 0
             
 
-            prev = "deu certo por enquanto"
+#             prev = "deu certo por enquanto"
 
 
             # fusivel, rele, capacitor, led = 0,0,0,0
 
 
-            # tensor = transform_image(image)
+            tensor = transform_image(image)
             # img = Image.open(src)
             # plt.imshow(img)
             # return "Imagem transformada em tensor e pronto para a classificação: " + str(tensor)
-            # prev =  str(tensor)
-            return render_template('upload.html', previsao=prev, aaaa=src, result1=fusivel, result2=rele, result3=capacitor, result4=led)
+            prev =  str(tensor)
+            return render_template('upload.html', previsao=prev, aaaa=src)
 
 
 @app.route('/t1', methods=['GET'])
