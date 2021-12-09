@@ -90,7 +90,7 @@ def previsao():
                 led = 0
             
 
-            prev = "deu certo por enquanto"
+            prev = 0
 
 
             # fusivel, rele, capacitor, led = 0,0,0,0
