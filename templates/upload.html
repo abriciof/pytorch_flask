@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link rel="stylesheet" href={{ url_for('static', filename='css/upload-file.css') }} >
-  <title>Neural Network</title>
+  <title>Nemo Machine Learning</title>
   <link rel="shortcut icon" href={{ url_for('static', filename='img/logo-aba-html.png') }}>
 </head>
 
@@ -16,7 +16,7 @@
 
 <header class="header">
 
-<a href="/" class="logo"><i class="fab fa-neos"></i> Neural Network</a>
+<a href="/" class="logo"><i class="fab fa-neos"></i> Nemo Neural Network</a>
 
 <nav class="navbar">
   <ul>
@@ -46,16 +46,15 @@
       <button type="submit" class="btn">Enviar</button>
 
       {% if previsao %}
-        <br><br>
-        <div class="row">
+        <br>
+        <!-- <div class="row">
             <div class="col" style="color: white; font-size: 1.3rem;">
                 <p style="text-align: center; justify-content: center; " > {{previsao}}</p>
             </div>
-        </div>
+        </div> -->
       {% endif %}
 
       {% if result1 %}
-        <br><br>
         <div class="row">
           <div class="col" style="color: white; font-size: 1.3rem;">
               <p style="text-align: center; justify-content: center; " > {{result1}}</p>
@@ -63,8 +62,7 @@
         </div>
       {% endif %}
 
-      {% if result2 %}
-        <br><br>
+      {% if result2 %}   
         <div class="row">
           <div class="col" style="color: white; font-size: 1.3rem;">
               <p style="text-align: center; justify-content: center; " > {{result2}}</p>
@@ -72,8 +70,7 @@
         </div>
       {% endif %}
 
-      {% if result3 %}
-        <br><br>
+      {% if result3 %}     
         <div class="row">
           <div class="col" style="color: white; font-size: 1.3rem;">
             <p style="text-align: center; justify-content: center; " > {{result3}}</p>
@@ -82,7 +79,6 @@
       {% endif %}
 
       {% if result4 %}
-        <br><br>
         <div class="row">
           <div class="col" style="color: white; font-size: 1.3rem;">
             <p style="text-align: center; justify-content: center; " > {{result4}}</p>
