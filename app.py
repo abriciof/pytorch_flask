@@ -91,6 +91,7 @@ def previsao():
             
 
             prev = 0
+            title = "1"
 
 
             # fusivel, rele, capacitor, led = 0,0,0,0
@@ -101,7 +102,7 @@ def previsao():
             # plt.imshow(img)
             # return "Imagem transformada em tensor e pronto para a classificação: " + str(tensor)
             # prev =  str(tensor)
-            return render_template('upload.html', previsao=prev, aaaa=src, result1=fusivel, result2=rele, result3=capacitor, result4=led)
+            return render_template('upload.html', previsao=prev, title=title, aaaa=src, result1=fusivel, result2=rele, result3=capacitor, result4=led)
 
 
 @app.route('/t1', methods=['GET'])

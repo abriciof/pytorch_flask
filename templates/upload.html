@@ -7,8 +7,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link rel="stylesheet" href={{ url_for('static', filename='css/upload-file.css') }} >
+  <link rel="stylesheet" href={{ url_for('static', filename='css/animations/load-animation.css') }} >
   <title>Classificador de Componentes PCI</title>
   <link rel="shortcut icon" href={{ url_for('static', filename='img/logo-aba-html.png') }}>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <style>
+     /* .box{
+      border-bottom: 20px solid #03a9f4;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px; */
+ 
+    @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:wght@400;500;600;700&display=swap');
+
+    *{
+      font-family: 'Poppins', sans-serif;
+      margin:0; padding:0;
+      box-sizing: border-box;
+      text-decoration: none;
+    }
+    html,
+    body {
+        font-family: "Montserrat";
+        text-rendering: optimizelegibility;
+        -webkit-font-smoothing: antialiased;
+    }
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #f6f6f6;
+    }
+    .box{
+      width: 300px;
+      border-bottom: 20px solid #03a9f4;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      background-color: #03a9f4;
+    }
+    .box h2{
+      color: #fff;
+      /* background-color: #03a9f4; */
+      padding: 10px 30px;
+      font-size: 62.5%;
+      font-weight: 700;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 10px;
+    }
+    .box ul{
+      position: relative;
+      background: #fff;
+    }
+    .box li{
+      list-style: none;
+      padding: 10px;
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 5px 25px rgba(0,0,0,.1);
+      transition: transform 0.5s;
+    }
+    .box ul li:hover{
+      transform: scale(1.1);
+      z-index: 100;
+      background: #25bcff;
+      box-shadow: 0 5px 25px rgba(0,0,0,.2);
+      color: #fff;
+    }
+  </style>
 </head>
 
 
@@ -35,17 +100,20 @@
 
   <form  class="drop-zone" action="/classificacao" method="post" enctype="multipart/form-data">
     <div class="container">
-      <img src="{{aaaa}}" id="avatar" alt="" style=" width: 50%;">
+   
+      <img src="{{aaaa}}" id="avatar" alt="" style=" width: 80%;">
       <div class="icon" id="nn">
         <i  class="fas fa-cloud-upload-alt" id="nuvem"></i>
       </div>
       <h3>Faça o upload da sua imagem</h3>
-      <label for="file">Escolher arquivo &#187</label>
-      <input type="file" name="file" id="file">
+      <label for="file" >Escolher arquivo &#187</label>
+      <input type="file" onclick="tiralista();" name="file" id="file">
       <input type="hidden" name="invisivel" id="tipo" value="123">
       <button type="submit" class="btn">Enviar</button>
+   
 
       <br>
+
       {% if previsao %}
       <div class="row">
           <div class="col" style="color: white; font-size: 1.3rem;">
@@ -53,8 +121,20 @@
           </div>
       </div>
       {% endif %}
+      {% if title %} 
 
-      {% if result1 %}
+        <div class="box">
+          <h3>Resultados Obtidos</h3>
+          <ul>
+            {% if result1 %}<li>{{result1}}</li>{% endif %}
+            {% if result2 %}<li>{{result2}}</li>{% endif %}
+            {% if result3 %}<li>{{result3}}</li>{% endif %}
+            {% if result4 %}<li>{{result4}}</li>{% endif %}
+          </ul>
+        </div>
+      {% endif %}
+     
+      <!-- {% if result1 %}
       <div class="row">
         <div class="col" style="color: white; font-size: 1.3rem;">
             <p style="text-align: center; justify-content: center; " > {{result1}}</p>
@@ -84,7 +164,7 @@
           <p style="text-align: center; justify-content: center; " > {{result4}}</p>
         </div>
       </div>
-      {% endif %}
+      {% endif %} -->
 
     </div>
     
@@ -116,6 +196,11 @@
         document.querySelector("#nn").setAttribute("class", "");
       }
     });
+
+    function tiralista(){
+      lista = document.getElementsByClassName('box')[0];
+      lista.hidden = true
+    }
 
   </script>
 
