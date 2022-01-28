@@ -1,7 +1,9 @@
 /apps/__pycache__/
 
-/venv/
+/env/
 
 /.ipynb_checkpoints
 
 Untitled.ipynb
+
+requirementsbackup.txt
