@@ -1,6 +1,9 @@
 # Classificação de Componentes Eletrônicos em Placa de Circuito Impresso utilizando Machine Learning
 
-Autor: Fabrício da Costa Guimarães
+<aside>
+📖 Autor: Fabrício da Costa Guimarães
+
+</aside>
 
 ## Descrição
 
