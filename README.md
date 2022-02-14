@@ -4,10 +4,7 @@
 
 
 <p align="center">
-
   <img src="https://user-images.githubusercontent.com/65060013/153782146-1fd45186-119c-47f7-9f10-44bd09e5a0b0.gif">
- 
-
 </p>
 
 
@@ -17,7 +14,7 @@ A aplicação tem como objetivo classificar e quantizar os tipos de componentes 
 
 ## 🖥️ Tecnologias
 
-A aplicação web foi desenvolvida com auxílio do framework Flask, juntamente com bibliotecas para o processamento das imagens (OpenCV) e para o uso da estruturas de rede neural artificial (PyTorch). Todos essas bibliotecas sendo da [Linguagem Python](https://www.python.org/) versão 3.9.7.
+A aplicação web foi desenvolvida com auxílio do framework Flask, juntamente com bibliotecas para o processamento das imagens ([OpenCV](https://opencv.org/)) e para o uso da estruturas de rede neural artificial ([PyTorch](https://pytorch.org/)). Todos essas bibliotecas sendo da [Linguagem Python](https://www.python.org/) versão 3.9.7.
 
 ## 🧾 Instalação de dependências
 
