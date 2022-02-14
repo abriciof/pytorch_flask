@@ -57,3 +57,26 @@ $ python .\app.py
 
 Com isso, é possível visualizar a aplicação diretamente no navegador (ou no servidor web).
 
+## 🌳 Ramos da Aplicação
+
+### 📚 Trilha de Aprendizado
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/65060013/153949876-bc58cecd-b0a1-4eb5-9977-c5dfbdc431ba.gif">
+</p>
+
+
+
+Ramo responsável pela introdução de conteúdos, conceitos, definições para o usuário da plataforma.
+
+### 🛠️ Classificador de Componentes
+
+imagem
+
+Ramo que o usuário é capaz de fazer o upload de uma imagem para o classificador agir. O classificador foi treinado para detectar 4 tipos de componentes, são eles:
+
+- Fusível
+- Relê
+- Capacitor eletrolítico
+- LED
+
