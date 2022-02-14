@@ -14,7 +14,7 @@ A aplicação tem como objetivo classificar e quantizar os tipos de componentes 
 
 ## 🖥️ Tecnologias
 
-A aplicação web foi desenvolvida com auxílio do framework Flask, juntamente com bibliotecas para o processamento das imagens ([OpenCV](https://opencv.org/)) e para o uso da estruturas de rede neural artificial ([PyTorch](https://pytorch.org/)). Todos essas bibliotecas sendo da [Linguagem Python](https://www.python.org/) versão 3.9.7.
+A aplicação web foi desenvolvida com auxílio do framework [Flask](https://flask.palletsprojects.com/en/2.0.x/), juntamente com bibliotecas para o processamento das imagens ([OpenCV](https://opencv.org/)) e para o uso da estruturas de rede neural artificial ([PyTorch](https://pytorch.org/)). Todos essas bibliotecas sendo da [Linguagem Python](https://www.python.org/) versão 3.9.7.
 
 ## 🧾 Instalação de dependências
 
