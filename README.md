@@ -1,22 +1,21 @@
 # Classificação de Componentes Eletrônicos em Placa de Circuito Impresso utilizando Machine Learning
 
-
-
-
 <p align="center">
   <img src="https://user-images.githubusercontent.com/65060013/153782146-1fd45186-119c-47f7-9f10-44bd09e5a0b0.gif">
 </p>
 
-
 ## 🪧 Descrição
+<hr>
 
 A aplicação tem como objetivo classificar e quantizar os tipos de componentes de uma placa de circuito impresso.
 
 ## 🖥️ Tecnologias
+<hr>
 
 A aplicação web foi desenvolvida com auxílio do framework [Flask](https://flask.palletsprojects.com/en/2.0.x/), juntamente com bibliotecas para o processamento de imagens ([OpenCV](https://opencv.org/)) e para o uso da estruturas de rede neural artificial ([PyTorch](https://pytorch.org/)). Todos essas bibliotecas sendo da [Linguagem Python](https://www.python.org/) versão 3.9.7.
 
 ## 🧾 Instalação de dependências
+<hr>
 
 Após clonar esse repositório em seu computador e ter a versão surgerida do Python, é necessário instalar as bibliotecas necessárias para o funcionamento da aplicação. São elas: 
 
@@ -48,6 +47,7 @@ $ pip install -r requirements.txt
 
 
 ## 📟 Como usar
+<hr>
 
 Após a instalação de dependências, é preciso que usar o comando de iniciação da aplicação no terminal (ou no servidor web), com o comando:
 
@@ -58,6 +58,7 @@ $ python .\app.py
 Com isso, é possível visualizar a aplicação diretamente no navegador (ou no servidor web).
 
 ## 🌳 Ramos da Aplicação
+<hr>
 
 ### 📚 Trilha de Aprendizado
 
@@ -69,9 +70,15 @@ Com isso, é possível visualizar a aplicação diretamente no navegador (ou no 
 
 Ramo responsável pela introdução de conteúdos, conceitos, definições para o usuário da plataforma.
 
+<hr>
+
 ### 🛠️ Classificador de Componentes
 
-imagem
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/65060013/153951837-932adc0b-93b7-48a5-947b-2e7befb3290f.gif">
+</p>
+
 
 Ramo que o usuário é capaz de fazer o upload de uma imagem para o classificador agir. O classificador foi treinado para detectar 4 tipos de componentes, são eles:
 
@@ -80,3 +87,15 @@ Ramo que o usuário é capaz de fazer o upload de uma imagem para o classificado
 - Capacitor eletrolítico
 - LED
 
+## ✍️ Autores
+<hr>
+
+
+
+> *Fabrício da Costa Guimarães* ● Engenharia da Computação UFAM ● [LinkedIn](https://www.linkedin.com/in/abriciof/) ● [GitHub](https://github.com/abriciof/)
+> 
+> 
+> *João Victor de Carvalho Marques* ● Engenharia da Computação UFAM ● [LinkedIn](https://www.linkedin.com/in/jo%C3%A3o-marques-171261134/) ● [GitHub](https://github.com/Battlesides)
+> 
+> *Kluiwert Victor Tavares Mota* ● Engenharia Elétrica UFAM ● LinkedIn ● [GitHub](https://github.com/kluiwert/)
+>
