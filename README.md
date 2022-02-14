@@ -21,8 +21,7 @@ A aplicação web foi desenvolvida com auxílio do framework Flask, juntamente c
 
 ## 🧾 Instalação de dependências
 
-Para a funcionalidade da aplicação, recomenda-se a instalação da lista de dependências a seguir:
-
+Após clonar esse repositório em seu computador e ter a versão surgerida do Python, é necessário instalar as bibliotecas necessárias para o funcionamento da aplicação. São elas: 
 
 ```python
 fonttools==4.29.0
@@ -44,9 +43,9 @@ typing_extensions==4.0.1
 Werkzeug==2.0.2
 ```
 
-com o comando:
+Instalando via terminal com o comando [pip](https://pypi.org/project/pip/):
 
-```python
+```bash
 $ pip install -r requirements.txt
 ```
 
