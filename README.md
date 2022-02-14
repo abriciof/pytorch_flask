@@ -10,7 +10,7 @@
 
 ## 🪧 Descrição
 
-A aplicação tem como objetivo classificar e quantizar os tipos de componentes de uma placa de circuito impresso. Com isso, foi produzido um protótipo que realizar
+A aplicação tem como objetivo classificar e quantizar os tipos de componentes de uma placa de circuito impresso.
 
 ## 🖥️ Tecnologias
 
