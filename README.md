@@ -103,4 +103,4 @@ Ramo que o usuário é capaz de fazer o upload de uma imagem para o classificado
 > *Kluiwert Victor Tavares Mota* ● Engenharia Elétrica UFAM ● 
 <a href="https://www.linkedin.com/" target="_blank"> LinkedIn </a> ● 
 <a href="https://github.com/kluiwert/" target="_blank"> GitHub </a>
->
+> 
