@@ -11,17 +11,18 @@
 </p>
 
 
-## Descrição
+## 🪧 Descrição
 
-## Tecnologias
+A aplicação tem como objetivo classificar e quantizar os tipos de componentes de uma placa de circuito impresso. Com isso, foi produzido um protótipo que realizar
 
-A aplicação web foi desenvolvida com auxílio do framework Flask, juntamente com bibliotecas para o processamento das imagens (OpenCV) e para o uso da estruturas de rede neurais (PyTorch)
+## 🖥️ Tecnologias
 
-## Instalação de dependências
+A aplicação web foi desenvolvida com auxílio do framework Flask, juntamente com bibliotecas para o processamento das imagens (OpenCV) e para o uso da estruturas de rede neural artificial (PyTorch). Todos essas bibliotecas sendo da [Linguagem Python](https://www.python.org/) versão 3.9.7.
 
+## 🧾 Instalação de dependências
 
+Para a funcionalidade da aplicação, recomenda-se a instalação da lista de dependências a seguir:
 
-Para a funcionalidade da aplicação, recomenda-se a instalação da lista de requeriments a seguir:
 
 ```python
 fonttools==4.29.0
@@ -50,7 +51,13 @@ $ pip install -r requirements.txt
 ```
 
 
-## Como usar
+## 📟 Como usar
 
-## Trabalhos futuros
+Após a instalação de dependências, é preciso que usar o comando de iniciação da aplicação no terminal (ou no servidor web), com o comando:
+
+```python
+$ python .\app.py
+```
+
+Com isso, é possível visualizar a aplicação diretamente no navegador (ou no servidor web).
 
