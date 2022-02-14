@@ -5,17 +5,17 @@
 </p>
 
 ## 🪧 Descrição
-<hr>
+
 
 A aplicação tem como objetivo classificar e quantizar os tipos de componentes de uma placa de circuito impresso.
 
 ## 🖥️ Tecnologias
-<hr>
+
 
 A aplicação web foi desenvolvida com auxílio do framework [Flask](https://flask.palletsprojects.com/en/2.0.x/), juntamente com bibliotecas para o processamento de imagens ([OpenCV](https://opencv.org/)) e para o uso da estruturas de rede neural artificial ([PyTorch](https://pytorch.org/)). Todos essas bibliotecas sendo da [Linguagem Python](https://www.python.org/) versão 3.9.7.
 
 ## 🧾 Instalação de dependências
-<hr>
+
 
 Após clonar esse repositório em seu computador e ter a versão surgerida do Python, é necessário instalar as bibliotecas necessárias para o funcionamento da aplicação. São elas: 
 
@@ -47,7 +47,7 @@ $ pip install -r requirements.txt
 
 
 ## 📟 Como usar
-<hr>
+
 
 Após a instalação de dependências, é preciso que usar o comando de iniciação da aplicação no terminal (ou no servidor web), com o comando:
 
@@ -58,9 +58,9 @@ $ python .\app.py
 Com isso, é possível visualizar a aplicação diretamente no navegador (ou no servidor web).
 
 ## 🌳 Ramos da Aplicação
-<hr>
 
 ### 📚 Trilha de Aprendizado
+
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/65060013/153949876-bc58cecd-b0a1-4eb5-9977-c5dfbdc431ba.gif">
@@ -69,6 +69,7 @@ Com isso, é possível visualizar a aplicação diretamente no navegador (ou no 
 
 
 Ramo responsável pela introdução de conteúdos, conceitos, definições para o usuário da plataforma.
+
 
 <hr>
 
@@ -88,7 +89,7 @@ Ramo que o usuário é capaz de fazer o upload de uma imagem para o classificado
 - LED
 
 ## ✍️ Autores
-<hr>
+
 
 
 
