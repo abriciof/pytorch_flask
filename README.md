@@ -111,7 +111,7 @@ Ramo que o usuário é capaz de fazer o upload de uma imagem para o classificado
 >
 
 
-<p align="center" style="font-size: 45px">
+<p align="center" style="font-size: 7vh">
   ⛳
 </p>
 
