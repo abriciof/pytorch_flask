@@ -49,7 +49,7 @@ $ pip install -r requirements.txt
 ## 📟 Como usar
 
 
-Após a instalação de dependências, é preciso que usar o comando de iniciação da aplicação no terminal (ou no servidor web), com o comando:
+Após a instalação de dependências, é preciso usar o comando de iniciação da aplicação no terminal (ou no servidor web), com o comando:
 
 ```python
 $ python .\app.py
