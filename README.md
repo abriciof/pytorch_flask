@@ -114,8 +114,8 @@ Ramo que o usuário é capaz de fazer o upload de uma imagem para o classificado
 
 <p align="center">
   <br>
-  <img src="https://user-images.githubusercontent.com/65060013/156955108-35069a93-3c6e-4e07-abf8-dfd5f3a443bb.png" style="width:20%">
-    <img src="https://user-images.githubusercontent.com/65060013/156952397-8edfe44c-edfc-406c-bfb0-87f7a5e73e0b.png" style="width:20%">
+  <img src="https://user-images.githubusercontent.com/65060013/156955108-35069a93-3c6e-4e07-abf8-dfd5f3a443bb.png" style="width:10%">
+    <img src="https://user-images.githubusercontent.com/65060013/156952397-8edfe44c-edfc-406c-bfb0-87f7a5e73e0b.png" style="width:10%">
 </p>
 
 
