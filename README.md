@@ -101,7 +101,7 @@ Ramo que o usuário é capaz de fazer o upload de uma imagem para o classificado
 > *João Victor de Carvalho Marques*
 > - Engenharia da Computação UFAM 
 > - <a href="https://www.linkedin.com/in/jo%C3%A3o-marques-171261134/" target="_blank"> LinkedIn </a>
-> - <a href="https://github.com/Battlesides" target="_blank"> GitHub </a>
+> - <a href="https://github.com/laffayatte" target="_blank"> GitHub </a>
 > 
 >
 > *Kluiwert Victor Tavares Mota* 
