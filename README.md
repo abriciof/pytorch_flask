@@ -1,4 +1,4 @@
-# Classificação de Componentes Eletrônicos em Placa de Circuito Impresso utilizando Machine Learning
+# 🎖️ Classificação de Componentes Eletrônicos em Placa de Circuito Impresso utilizando Machine Learning
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/65060013/153782146-1fd45186-119c-47f7-9f10-44bd09e5a0b0.gif">
